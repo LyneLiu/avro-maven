@@ -1,8 +1,10 @@
 package com.lyne;
 
-import com.lyne.proto.PrdIdentity;
-import com.lyne.proto.PrdInfo;
-import com.lyne.proto.PrdInfoType;
+import com.lyne.proto.*;
+import org.apache.avro.AvroRemoteException;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by nn_liu on 2017/6/19.
@@ -11,7 +13,6 @@ public class PrdInfoImpl implements PrdInfo {
 
     // in this simple example just return details of the message
     public PrdInfoType queryPrdInfo(PrdIdentity prdIdentity) {
-        System.out.println("Sending message");
         PrdInfoType prdInfoType = new PrdInfoType();
         if (prdIdentity.getId() == 1){
             prdInfoType.setId(1);
@@ -23,5 +24,33 @@ public class PrdInfoImpl implements PrdInfo {
             prdInfoType.setPrice(10.1);
         }
         return prdInfoType;
+    }
+
+    public UserInfoType queryUserInfo(UserIdentity userIdentity){
+        UserInfoType userInfoType = new UserInfoType();
+        Address address01 = new Address();
+        address01.setCity("Japan");
+        Address address02 = new Address();
+        address02.setCity("China");
+        Address address03 = new Address();
+        address03.setCity("America");
+        if (userIdentity.getId() == 0){
+            List<Address> addrList = new ArrayList<>();
+            addrList.add(address01);
+            userInfoType.setId(0);
+            userInfoType.setName("luffy");
+            userInfoType.setAge(20);
+            userInfoType.setAddr(addrList);
+        }else {
+            List<Address> addrList = new ArrayList<>();
+            addrList.add(address02);
+            addrList.add(address03);
+            userInfoType.setId(1);
+            userInfoType.setName("micky");
+            userInfoType.setAge(36);
+            userInfoType.setAddr(addrList);
+        }
+
+        return userInfoType;
     }
 }

@@ -8,10 +8,13 @@ package com.lyne.proto;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public interface PrdInfo {
-  public static final org.apache.avro.Protocol PROTOCOL = org.apache.avro.Protocol.parse("{\"protocol\":\"PrdInfo\",\"namespace\":\"com.lyne.proto\",\"types\":[{\"type\":\"record\",\"name\":\"PrdIdentity\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"PrdInfoType\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"price\",\"type\":\"double\"}]}],\"messages\":{\"queryPrdInfo\":{\"request\":[{\"name\":\"requestType\",\"type\":\"PrdIdentity\"}],\"response\":\"PrdInfoType\"}}}");
+  public static final org.apache.avro.Protocol PROTOCOL = org.apache.avro.Protocol.parse("{\"protocol\":\"PrdInfo\",\"namespace\":\"com.lyne.proto\",\"types\":[{\"type\":\"record\",\"name\":\"PrdIdentity\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"}]},{\"type\":\"record\",\"name\":\"PrdInfoType\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"price\",\"type\":\"double\"}]},{\"type\":\"record\",\"name\":\"UserIdentity\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"}]},{\"type\":\"record\",\"name\":\"UserInfoType\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"addr\",\"type\":[{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Address\",\"fields\":[{\"name\":\"city\",\"type\":\"string\"}]}},\"null\"]}]}],\"messages\":{\"queryPrdInfo\":{\"request\":[{\"name\":\"prdIdentity\",\"type\":\"PrdIdentity\"}],\"response\":\"PrdInfoType\"},\"queryUserInfo\":{\"request\":[{\"name\":\"userIdentity\",\"type\":\"UserIdentity\"}],\"response\":\"UserInfoType\"}}}");
   /**
    */
-  com.lyne.proto.PrdInfoType queryPrdInfo(com.lyne.proto.PrdIdentity requestType) throws org.apache.avro.AvroRemoteException;
+  com.lyne.proto.PrdInfoType queryPrdInfo(com.lyne.proto.PrdIdentity prdIdentity) throws org.apache.avro.AvroRemoteException;
+  /**
+   */
+  com.lyne.proto.UserInfoType queryUserInfo(com.lyne.proto.UserIdentity userIdentity) throws org.apache.avro.AvroRemoteException;
 
   @SuppressWarnings("all")
   public interface Callback extends PrdInfo {
@@ -19,6 +22,10 @@ public interface PrdInfo {
     /**
      * @throws java.io.IOException The async call could not be completed.
      */
-    void queryPrdInfo(com.lyne.proto.PrdIdentity requestType, org.apache.avro.ipc.Callback<com.lyne.proto.PrdInfoType> callback) throws java.io.IOException;
+    void queryPrdInfo(com.lyne.proto.PrdIdentity prdIdentity, org.apache.avro.ipc.Callback<com.lyne.proto.PrdInfoType> callback) throws java.io.IOException;
+    /**
+     * @throws java.io.IOException The async call could not be completed.
+     */
+    void queryUserInfo(com.lyne.proto.UserIdentity userIdentity, org.apache.avro.ipc.Callback<com.lyne.proto.UserInfoType> callback) throws java.io.IOException;
   }
 }

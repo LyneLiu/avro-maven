@@ -1,8 +1,6 @@
 package com.lyne;
 
-import com.lyne.proto.PrdIdentity;
-import com.lyne.proto.PrdInfo;
-import com.lyne.proto.PrdInfoType;
+import com.lyne.proto.*;
 import org.apache.avro.ipc.NettyTransceiver;
 import org.apache.avro.ipc.specific.SpecificRequestor;
 
@@ -30,6 +28,12 @@ public class PrdInfoClient {
             System.out.println("Calling proxy.send with message:  " + prdIdentity.toString());
             PrdInfoType prdInfoType = proxy.queryPrdInfo(prdIdentity);
             System.out.println("Proxy response message: " + prdInfoType.toString());
+
+            UserIdentity userIdentity = new UserIdentity();
+            userIdentity.setId(1);
+            System.out.println("Calling proxy.send with message:  " + userIdentity.toString());
+            UserInfoType userInfoType = proxy.queryUserInfo(userIdentity);
+            System.out.println("Proxy response message: " + userInfoType.toString());
 
         }catch (Exception e){
             // do nothing
