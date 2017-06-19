@@ -340,6 +340,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
       return this;
     }
 
+    @Override
     @SuppressWarnings("unchecked")
     public PrdInfoType build() {
       try {

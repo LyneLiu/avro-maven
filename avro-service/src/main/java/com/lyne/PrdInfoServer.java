@@ -1,9 +1,10 @@
+package com.lyne;
+
 import com.lyne.proto.PrdInfo;
 import org.apache.avro.ipc.NettyServer;
 import org.apache.avro.ipc.Server;
 import org.apache.avro.ipc.specific.SpecificResponder;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
 
 /**

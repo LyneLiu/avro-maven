@@ -1,3 +1,5 @@
+package com.lyne;
+
 import com.lyne.proto.PrdIdentity;
 import com.lyne.proto.PrdInfo;
 import com.lyne.proto.PrdInfoType;

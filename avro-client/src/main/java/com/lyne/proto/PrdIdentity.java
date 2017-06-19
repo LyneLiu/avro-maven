@@ -272,6 +272,7 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
       return this;
     }
 
+    @Override
     @SuppressWarnings("unchecked")
     public PrdIdentity build() {
       try {
