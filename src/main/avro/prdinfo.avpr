@@ -1,0 +1,27 @@
+{
+ "namespace": "com.lyne.proto",
+ "protocol": "PrdInfo",
+
+ "types": [
+     {"name": "PrdIdentity", "type": "record",
+      "fields": [
+          {"name": "id",   "type": "int"},
+          {"name": "type", "type": "string"}
+      ]
+     },
+     {"name": "PrdInfoType", "type": "record",
+     "fields": [
+          {"name": "id",   "type": "int"},
+          {"name": "type", "type": "string"},
+          {"name": "price", "type": "double"}
+     ]
+     }
+ ],
+
+ "messages": {
+     "queryPrdInfo": {
+         "request": [{"name": "requestType", "type": "PrdIdentity"}],
+         "response": "PrdInfoType"
+     }
+ }
+}
