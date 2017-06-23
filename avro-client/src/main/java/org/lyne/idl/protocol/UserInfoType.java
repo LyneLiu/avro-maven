@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.lyne.proto;
+package org.lyne.idl.protocol;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -8234783232407593994L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"UserInfoType\",\"namespace\":\"com.lyne.proto\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"addr\",\"type\":[{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Address\",\"fields\":[{\"name\":\"city\",\"type\":\"string\"}]}},\"null\"]}]}");
+  private static final long serialVersionUID = 5535936323750353952L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"UserInfoType\",\"namespace\":\"org.lyne.idl.protocol\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"age\",\"type\":\"int\"},{\"name\":\"addr\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Address\",\"fields\":[{\"name\":\"city\",\"type\":\"string\"}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -54,7 +54,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
   @Deprecated public int id;
   @Deprecated public java.lang.CharSequence name;
   @Deprecated public int age;
-  @Deprecated public java.util.List<com.lyne.proto.Address> addr;
+  @Deprecated public java.util.List<org.lyne.idl.protocol.Address> addr;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -70,7 +70,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
    * @param age The new value for age
    * @param addr The new value for addr
    */
-  public UserInfoType(java.lang.Integer id, java.lang.CharSequence name, java.lang.Integer age, java.util.List<com.lyne.proto.Address> addr) {
+  public UserInfoType(java.lang.Integer id, java.lang.CharSequence name, java.lang.Integer age, java.util.List<org.lyne.idl.protocol.Address> addr) {
     this.id = id;
     this.name = name;
     this.age = age;
@@ -96,7 +96,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
     case 0: id = (java.lang.Integer)value$; break;
     case 1: name = (java.lang.CharSequence)value$; break;
     case 2: age = (java.lang.Integer)value$; break;
-    case 3: addr = (java.util.List<com.lyne.proto.Address>)value$; break;
+    case 3: addr = (java.util.List<org.lyne.idl.protocol.Address>)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -153,7 +153,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
    * Gets the value of the 'addr' field.
    * @return The value of the 'addr' field.
    */
-  public java.util.List<com.lyne.proto.Address> getAddr() {
+  public java.util.List<org.lyne.idl.protocol.Address> getAddr() {
     return addr;
   }
 
@@ -161,7 +161,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
    * Sets the value of the 'addr' field.
    * @param value the value to set.
    */
-  public void setAddr(java.util.List<com.lyne.proto.Address> value) {
+  public void setAddr(java.util.List<org.lyne.idl.protocol.Address> value) {
     this.addr = value;
   }
 
@@ -169,8 +169,8 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
    * Creates a new UserInfoType RecordBuilder.
    * @return A new UserInfoType RecordBuilder
    */
-  public static com.lyne.proto.UserInfoType.Builder newBuilder() {
-    return new com.lyne.proto.UserInfoType.Builder();
+  public static org.lyne.idl.protocol.UserInfoType.Builder newBuilder() {
+    return new org.lyne.idl.protocol.UserInfoType.Builder();
   }
 
   /**
@@ -178,8 +178,8 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing builder to copy.
    * @return A new UserInfoType RecordBuilder
    */
-  public static com.lyne.proto.UserInfoType.Builder newBuilder(com.lyne.proto.UserInfoType.Builder other) {
-    return new com.lyne.proto.UserInfoType.Builder(other);
+  public static org.lyne.idl.protocol.UserInfoType.Builder newBuilder(org.lyne.idl.protocol.UserInfoType.Builder other) {
+    return new org.lyne.idl.protocol.UserInfoType.Builder(other);
   }
 
   /**
@@ -187,8 +187,8 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing instance to copy.
    * @return A new UserInfoType RecordBuilder
    */
-  public static com.lyne.proto.UserInfoType.Builder newBuilder(com.lyne.proto.UserInfoType other) {
-    return new com.lyne.proto.UserInfoType.Builder(other);
+  public static org.lyne.idl.protocol.UserInfoType.Builder newBuilder(org.lyne.idl.protocol.UserInfoType other) {
+    return new org.lyne.idl.protocol.UserInfoType.Builder(other);
   }
 
   /**
@@ -200,7 +200,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
     private int id;
     private java.lang.CharSequence name;
     private int age;
-    private java.util.List<com.lyne.proto.Address> addr;
+    private java.util.List<org.lyne.idl.protocol.Address> addr;
 
     /** Creates a new Builder */
     private Builder() {
@@ -211,7 +211,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.lyne.proto.UserInfoType.Builder other) {
+    private Builder(org.lyne.idl.protocol.UserInfoType.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -235,7 +235,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing UserInfoType instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.lyne.proto.UserInfoType other) {
+    private Builder(org.lyne.idl.protocol.UserInfoType other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -268,7 +268,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder setId(int value) {
+    public org.lyne.idl.protocol.UserInfoType.Builder setId(int value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -288,7 +288,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder clearId() {
+    public org.lyne.idl.protocol.UserInfoType.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -306,7 +306,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'name'.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder setName(java.lang.CharSequence value) {
+    public org.lyne.idl.protocol.UserInfoType.Builder setName(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.name = value;
       fieldSetFlags()[1] = true;
@@ -326,7 +326,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'name' field.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder clearName() {
+    public org.lyne.idl.protocol.UserInfoType.Builder clearName() {
       name = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -345,7 +345,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'age'.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder setAge(int value) {
+    public org.lyne.idl.protocol.UserInfoType.Builder setAge(int value) {
       validate(fields()[2], value);
       this.age = value;
       fieldSetFlags()[2] = true;
@@ -365,7 +365,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'age' field.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder clearAge() {
+    public org.lyne.idl.protocol.UserInfoType.Builder clearAge() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -374,7 +374,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * Gets the value of the 'addr' field.
       * @return The value.
       */
-    public java.util.List<com.lyne.proto.Address> getAddr() {
+    public java.util.List<org.lyne.idl.protocol.Address> getAddr() {
       return addr;
     }
 
@@ -383,7 +383,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'addr'.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder setAddr(java.util.List<com.lyne.proto.Address> value) {
+    public org.lyne.idl.protocol.UserInfoType.Builder setAddr(java.util.List<org.lyne.idl.protocol.Address> value) {
       validate(fields()[3], value);
       this.addr = value;
       fieldSetFlags()[3] = true;
@@ -403,7 +403,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'addr' field.
       * @return This builder.
       */
-    public com.lyne.proto.UserInfoType.Builder clearAddr() {
+    public org.lyne.idl.protocol.UserInfoType.Builder clearAddr() {
       addr = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -417,7 +417,7 @@ public class UserInfoType extends org.apache.avro.specific.SpecificRecordBase im
         record.id = fieldSetFlags()[0] ? this.id : (java.lang.Integer) defaultValue(fields()[0]);
         record.name = fieldSetFlags()[1] ? this.name : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.age = fieldSetFlags()[2] ? this.age : (java.lang.Integer) defaultValue(fields()[2]);
-        record.addr = fieldSetFlags()[3] ? this.addr : (java.util.List<com.lyne.proto.Address>) defaultValue(fields()[3]);
+        record.addr = fieldSetFlags()[3] ? this.addr : (java.util.List<org.lyne.idl.protocol.Address>) defaultValue(fields()[3]);
         return record;
       } catch (java.lang.Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);

@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.lyne.proto;
+package org.lyne.idl.protocol;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 7091527872152712138L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"UserIdentity\",\"namespace\":\"com.lyne.proto\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"}]}");
+  private static final long serialVersionUID = -7529495349927734558L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"UserIdentity\",\"namespace\":\"org.lyne.idl.protocol\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -106,8 +106,8 @@ public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase im
    * Creates a new UserIdentity RecordBuilder.
    * @return A new UserIdentity RecordBuilder
    */
-  public static com.lyne.proto.UserIdentity.Builder newBuilder() {
-    return new com.lyne.proto.UserIdentity.Builder();
+  public static org.lyne.idl.protocol.UserIdentity.Builder newBuilder() {
+    return new org.lyne.idl.protocol.UserIdentity.Builder();
   }
 
   /**
@@ -115,8 +115,8 @@ public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing builder to copy.
    * @return A new UserIdentity RecordBuilder
    */
-  public static com.lyne.proto.UserIdentity.Builder newBuilder(com.lyne.proto.UserIdentity.Builder other) {
-    return new com.lyne.proto.UserIdentity.Builder(other);
+  public static org.lyne.idl.protocol.UserIdentity.Builder newBuilder(org.lyne.idl.protocol.UserIdentity.Builder other) {
+    return new org.lyne.idl.protocol.UserIdentity.Builder(other);
   }
 
   /**
@@ -124,8 +124,8 @@ public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing instance to copy.
    * @return A new UserIdentity RecordBuilder
    */
-  public static com.lyne.proto.UserIdentity.Builder newBuilder(com.lyne.proto.UserIdentity other) {
-    return new com.lyne.proto.UserIdentity.Builder(other);
+  public static org.lyne.idl.protocol.UserIdentity.Builder newBuilder(org.lyne.idl.protocol.UserIdentity other) {
+    return new org.lyne.idl.protocol.UserIdentity.Builder(other);
   }
 
   /**
@@ -145,7 +145,7 @@ public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.lyne.proto.UserIdentity.Builder other) {
+    private Builder(org.lyne.idl.protocol.UserIdentity.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -157,7 +157,7 @@ public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing UserIdentity instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.lyne.proto.UserIdentity other) {
+    private Builder(org.lyne.idl.protocol.UserIdentity other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -178,7 +178,7 @@ public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.lyne.proto.UserIdentity.Builder setId(int value) {
+    public org.lyne.idl.protocol.UserIdentity.Builder setId(int value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -198,7 +198,7 @@ public class UserIdentity extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.lyne.proto.UserIdentity.Builder clearId() {
+    public org.lyne.idl.protocol.UserIdentity.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }

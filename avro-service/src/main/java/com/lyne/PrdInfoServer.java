@@ -1,6 +1,6 @@
 package com.lyne;
 
-import com.lyne.proto.PrdInfo;
+import org.lyne.idl.protocol.*;
 import org.apache.avro.ipc.NettyServer;
 import org.apache.avro.ipc.Server;
 import org.apache.avro.ipc.specific.SpecificResponder;

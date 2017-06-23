@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.lyne.proto;
+package org.lyne.idl.protocol;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -7342766310482128552L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PrdInfoType\",\"namespace\":\"com.lyne.proto\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"price\",\"type\":\"double\"}]}");
+  private static final long serialVersionUID = 4186004988984879308L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PrdInfoType\",\"namespace\":\"org.lyne.idl.protocol\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"},{\"name\":\"price\",\"type\":\"double\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -148,8 +148,8 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
    * Creates a new PrdInfoType RecordBuilder.
    * @return A new PrdInfoType RecordBuilder
    */
-  public static com.lyne.proto.PrdInfoType.Builder newBuilder() {
-    return new com.lyne.proto.PrdInfoType.Builder();
+  public static org.lyne.idl.protocol.PrdInfoType.Builder newBuilder() {
+    return new org.lyne.idl.protocol.PrdInfoType.Builder();
   }
 
   /**
@@ -157,8 +157,8 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing builder to copy.
    * @return A new PrdInfoType RecordBuilder
    */
-  public static com.lyne.proto.PrdInfoType.Builder newBuilder(com.lyne.proto.PrdInfoType.Builder other) {
-    return new com.lyne.proto.PrdInfoType.Builder(other);
+  public static org.lyne.idl.protocol.PrdInfoType.Builder newBuilder(org.lyne.idl.protocol.PrdInfoType.Builder other) {
+    return new org.lyne.idl.protocol.PrdInfoType.Builder(other);
   }
 
   /**
@@ -166,8 +166,8 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing instance to copy.
    * @return A new PrdInfoType RecordBuilder
    */
-  public static com.lyne.proto.PrdInfoType.Builder newBuilder(com.lyne.proto.PrdInfoType other) {
-    return new com.lyne.proto.PrdInfoType.Builder(other);
+  public static org.lyne.idl.protocol.PrdInfoType.Builder newBuilder(org.lyne.idl.protocol.PrdInfoType other) {
+    return new org.lyne.idl.protocol.PrdInfoType.Builder(other);
   }
 
   /**
@@ -189,7 +189,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.lyne.proto.PrdInfoType.Builder other) {
+    private Builder(org.lyne.idl.protocol.PrdInfoType.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -209,7 +209,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing PrdInfoType instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.lyne.proto.PrdInfoType other) {
+    private Builder(org.lyne.idl.protocol.PrdInfoType other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -238,7 +238,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.lyne.proto.PrdInfoType.Builder setId(int value) {
+    public org.lyne.idl.protocol.PrdInfoType.Builder setId(int value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -258,7 +258,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.lyne.proto.PrdInfoType.Builder clearId() {
+    public org.lyne.idl.protocol.PrdInfoType.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -276,7 +276,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'type'.
       * @return This builder.
       */
-    public com.lyne.proto.PrdInfoType.Builder setType(java.lang.CharSequence value) {
+    public org.lyne.idl.protocol.PrdInfoType.Builder setType(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.type = value;
       fieldSetFlags()[1] = true;
@@ -296,7 +296,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'type' field.
       * @return This builder.
       */
-    public com.lyne.proto.PrdInfoType.Builder clearType() {
+    public org.lyne.idl.protocol.PrdInfoType.Builder clearType() {
       type = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -315,7 +315,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'price'.
       * @return This builder.
       */
-    public com.lyne.proto.PrdInfoType.Builder setPrice(double value) {
+    public org.lyne.idl.protocol.PrdInfoType.Builder setPrice(double value) {
       validate(fields()[2], value);
       this.price = value;
       fieldSetFlags()[2] = true;
@@ -335,7 +335,7 @@ public class PrdInfoType extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'price' field.
       * @return This builder.
       */
-    public com.lyne.proto.PrdInfoType.Builder clearPrice() {
+    public org.lyne.idl.protocol.PrdInfoType.Builder clearPrice() {
       fieldSetFlags()[2] = false;
       return this;
     }

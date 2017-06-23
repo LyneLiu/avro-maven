@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.lyne.proto;
+package org.lyne.idl.protocol;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class Address extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 763448061677754791L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Address\",\"namespace\":\"com.lyne.proto\",\"fields\":[{\"name\":\"city\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = -39477766769805169L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Address\",\"namespace\":\"org.lyne.idl.protocol\",\"fields\":[{\"name\":\"city\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -106,8 +106,8 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
    * Creates a new Address RecordBuilder.
    * @return A new Address RecordBuilder
    */
-  public static com.lyne.proto.Address.Builder newBuilder() {
-    return new com.lyne.proto.Address.Builder();
+  public static org.lyne.idl.protocol.Address.Builder newBuilder() {
+    return new org.lyne.idl.protocol.Address.Builder();
   }
 
   /**
@@ -115,8 +115,8 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing builder to copy.
    * @return A new Address RecordBuilder
    */
-  public static com.lyne.proto.Address.Builder newBuilder(com.lyne.proto.Address.Builder other) {
-    return new com.lyne.proto.Address.Builder(other);
+  public static org.lyne.idl.protocol.Address.Builder newBuilder(org.lyne.idl.protocol.Address.Builder other) {
+    return new org.lyne.idl.protocol.Address.Builder(other);
   }
 
   /**
@@ -124,8 +124,8 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing instance to copy.
    * @return A new Address RecordBuilder
    */
-  public static com.lyne.proto.Address.Builder newBuilder(com.lyne.proto.Address other) {
-    return new com.lyne.proto.Address.Builder(other);
+  public static org.lyne.idl.protocol.Address.Builder newBuilder(org.lyne.idl.protocol.Address other) {
+    return new org.lyne.idl.protocol.Address.Builder(other);
   }
 
   /**
@@ -145,7 +145,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.lyne.proto.Address.Builder other) {
+    private Builder(org.lyne.idl.protocol.Address.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.city)) {
         this.city = data().deepCopy(fields()[0].schema(), other.city);
@@ -157,7 +157,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Address instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.lyne.proto.Address other) {
+    private Builder(org.lyne.idl.protocol.Address other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.city)) {
         this.city = data().deepCopy(fields()[0].schema(), other.city);
@@ -178,7 +178,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'city'.
       * @return This builder.
       */
-    public com.lyne.proto.Address.Builder setCity(java.lang.CharSequence value) {
+    public org.lyne.idl.protocol.Address.Builder setCity(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.city = value;
       fieldSetFlags()[0] = true;
@@ -198,7 +198,7 @@ public class Address extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'city' field.
       * @return This builder.
       */
-    public com.lyne.proto.Address.Builder clearCity() {
+    public org.lyne.idl.protocol.Address.Builder clearCity() {
       city = null;
       fieldSetFlags()[0] = false;
       return this;

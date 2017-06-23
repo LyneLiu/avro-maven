@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.lyne.proto;
+package org.lyne.idl.protocol;
 
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -13,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4793302823581264670L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PrdIdentity\",\"namespace\":\"com.lyne.proto\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"}]}");
+  private static final long serialVersionUID = -8505358503938231109L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"PrdIdentity\",\"namespace\":\"org.lyne.idl.protocol\",\"fields\":[{\"name\":\"id\",\"type\":\"int\"},{\"name\":\"type\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -127,8 +127,8 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
    * Creates a new PrdIdentity RecordBuilder.
    * @return A new PrdIdentity RecordBuilder
    */
-  public static com.lyne.proto.PrdIdentity.Builder newBuilder() {
-    return new com.lyne.proto.PrdIdentity.Builder();
+  public static org.lyne.idl.protocol.PrdIdentity.Builder newBuilder() {
+    return new org.lyne.idl.protocol.PrdIdentity.Builder();
   }
 
   /**
@@ -136,8 +136,8 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing builder to copy.
    * @return A new PrdIdentity RecordBuilder
    */
-  public static com.lyne.proto.PrdIdentity.Builder newBuilder(com.lyne.proto.PrdIdentity.Builder other) {
-    return new com.lyne.proto.PrdIdentity.Builder(other);
+  public static org.lyne.idl.protocol.PrdIdentity.Builder newBuilder(org.lyne.idl.protocol.PrdIdentity.Builder other) {
+    return new org.lyne.idl.protocol.PrdIdentity.Builder(other);
   }
 
   /**
@@ -145,8 +145,8 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing instance to copy.
    * @return A new PrdIdentity RecordBuilder
    */
-  public static com.lyne.proto.PrdIdentity.Builder newBuilder(com.lyne.proto.PrdIdentity other) {
-    return new com.lyne.proto.PrdIdentity.Builder(other);
+  public static org.lyne.idl.protocol.PrdIdentity.Builder newBuilder(org.lyne.idl.protocol.PrdIdentity other) {
+    return new org.lyne.idl.protocol.PrdIdentity.Builder(other);
   }
 
   /**
@@ -167,7 +167,7 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.lyne.proto.PrdIdentity.Builder other) {
+    private Builder(org.lyne.idl.protocol.PrdIdentity.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -183,7 +183,7 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing PrdIdentity instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.lyne.proto.PrdIdentity other) {
+    private Builder(org.lyne.idl.protocol.PrdIdentity other) {
             super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -208,7 +208,7 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public com.lyne.proto.PrdIdentity.Builder setId(int value) {
+    public org.lyne.idl.protocol.PrdIdentity.Builder setId(int value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -228,7 +228,7 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'id' field.
       * @return This builder.
       */
-    public com.lyne.proto.PrdIdentity.Builder clearId() {
+    public org.lyne.idl.protocol.PrdIdentity.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -246,7 +246,7 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'type'.
       * @return This builder.
       */
-    public com.lyne.proto.PrdIdentity.Builder setType(java.lang.CharSequence value) {
+    public org.lyne.idl.protocol.PrdIdentity.Builder setType(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.type = value;
       fieldSetFlags()[1] = true;
@@ -266,7 +266,7 @@ public class PrdIdentity extends org.apache.avro.specific.SpecificRecordBase imp
       * Clears the value of the 'type' field.
       * @return This builder.
       */
-    public com.lyne.proto.PrdIdentity.Builder clearType() {
+    public org.lyne.idl.protocol.PrdIdentity.Builder clearType() {
       type = null;
       fieldSetFlags()[1] = false;
       return this;

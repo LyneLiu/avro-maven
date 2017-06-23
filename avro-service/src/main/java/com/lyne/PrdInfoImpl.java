@@ -1,7 +1,6 @@
 package com.lyne;
 
-import com.lyne.proto.*;
-import org.apache.avro.AvroRemoteException;
+import org.lyne.idl.protocol.*;
 
 import java.util.ArrayList;
 import java.util.List;

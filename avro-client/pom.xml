@@ -13,6 +13,7 @@
 
     <name>avro-client</name>
     <url>http://maven.apache.org</url>
+    <description>https://mingqin.wordpress.com/2015/01/30/avro-idl-composites-avro-schemas-by-avrohubtool/</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,12 +54,13 @@
                         <id>schemas</id>
                         <phase>generate-sources</phase>
                         <goals>
-                            <goal>schema</goal>
+                            <!--只有schema文件需要生成的情况下，可以使用<goal>schema</goal>-->
+                            <!--<goal>schema</goal>-->
                             <goal>protocol</goal>
                             <goal>idl-protocol</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/avro-idl/</sourceDirectory>
                             <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
                         </configuration>
                     </execution>

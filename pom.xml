@@ -13,7 +13,7 @@
         <module>avro-bu</module>
     </modules>
 
-    <name>avro-maven Maven Webapp</name>
+    <name>avro-maven</name>
     <url>http://maven.apache.org</url>
 
     <properties>

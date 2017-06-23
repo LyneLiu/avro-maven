@@ -1,6 +1,6 @@
 package com.lyne;
 
-import com.lyne.proto.*;
+import org.lyne.idl.protocol.*;
 import org.apache.avro.ipc.NettyTransceiver;
 import org.apache.avro.ipc.specific.SpecificRequestor;
 
